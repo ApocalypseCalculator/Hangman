@@ -1195,8 +1195,8 @@ public class Game {
             }
             Collections.sort(lb, Collections.reverseOrder());
             cache.put("lb", lb);
-            cache.put("useOnline", new Boolean(false));
-            cache.put("latency", new Long(checkForInternet()));
+            //cache.put("useOnline", new Boolean(false));
+            //cache.put("latency", new Long(checkForInternet()));
             cache.put("endlessScore", new Integer(0));
             cache.put("mainMenuCalled", new Boolean(false));
         } catch (Exception e) { //catches all exceptions, regardless of type	
@@ -1973,11 +1973,11 @@ public class Game {
         c.drawString("2. Medium", 260, 210);
         c.drawString("3. Hard", 280, 240);
         c.drawString("4. Extreme", 260, 270);
-        c.drawString("1. Online Word Bank", 220, 330);
-        c.drawString("2. Offline Word Bank", 220, 360);
+        //c.drawString("1. Online Word Bank", 220, 330);
+        //c.drawString("2. Offline Word Bank", 220, 360);
         c.setFont(new Font("Times New Roman", 1, 30));
         c.drawString("Enter Your Difficulty: ", 175, 418);
-        c.drawString("Enter Your Word Bank: ", 175, 458);
+        //c.drawString("Enter Your Word Bank: ", 175, 458);
         c.setCursor(21, 59);
         while (true) {
             try {
@@ -1985,9 +1985,9 @@ public class Game {
                 diff = Integer.parseInt(diffNum);
                 c.setCursor(23, 62);
                 bankNum = c.readLine();
-                bank = Integer.parseInt(bankNum);
+                //bank = Integer.parseInt(bankNum);
                 if (diff == 1 || diff == 2 || diff == 3 || diff == 4) {
-                    if (bank == 1) {
+                    /*if (bank == 1) {
                         cache.put("useOnline", new Boolean(true));
                         break;
                     } else if (bank == 2) {
@@ -1995,7 +1995,8 @@ public class Game {
                         break;
                     } else {
                         createError("You must choose either 1 or 2 for word bank", "Input Error");
-                    }
+                    }*/
+                    break;
                 } else {
                     createError("You need a valid difficulty level!", "Input Error");
                 }
